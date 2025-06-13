@@ -1,0 +1,9 @@
+@theme {
+  --color-primary: #ff2e55;
+  --color-gray-light: '#f2f2f2';
+  --color-gray: '#a1a1a1';
+  /* --color-white: '#ffffff'; */
+}
+
+@layer utilities {
+}
