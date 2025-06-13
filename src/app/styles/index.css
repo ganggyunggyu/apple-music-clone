@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import './App.css';
+@import './tailwind.config.css';
+@import 'tailwindcss' important;
+
+html,
+body {
+  background-color: #000;
+}
