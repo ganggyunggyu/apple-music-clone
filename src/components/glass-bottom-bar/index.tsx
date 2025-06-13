@@ -31,7 +31,6 @@ export const GlassBottomBar = () => {
 
   const [isCollapsed, setIsCollapsed] = React.useState(false);
 
-  // ✅ 2) 스크롤 방향이 바뀔 때마다 업데이트
   React.useEffect(() => {
     setIsCollapsed(scrollDirection === 'DOWN');
   }, [scrollDirection]);
@@ -50,7 +49,7 @@ export const GlassBottomBar = () => {
           ease: 'easeInOut',
           duration: 0.3,
         }}
-        className={`relative flex items-center justify-between border rounded-full border-white/20 p-1 
+        className={`relative flex items-center justify-between border border-white/20 rounded-full  p-1 
           ${isCollapsed ? 'flex-0' : 'flex-1'}
           `}
       >
@@ -134,7 +133,7 @@ interface MiniPlayerProps {
 export const MiniPlayer: React.FC<MiniPlayerProps> = ({ isCollapsed }) => {
   return (
     <div
-      className={`fixed left-1/2 -translate-x-1/2  px-4 py-2 min-[70px] bg-white/30 dark:bg-zinc-800/30 backdrop-blur-md rounded-full shadow-lg flex items-center justify-between text-white transition-all duration-300
+      className={`fixed left-1/2 -translate-x-1/2  px-4 py-2 min-[70px] bg-white/30 dark:bg-zinc-800/30 backdrop-blur-md rounded-full shadow-lg flex items-center justify-between text-white transition-all duration-300 border border-white/20
     ${isCollapsed ? 'bottom-2 w-7/12' : 'bottom-20 w-11/12'}
     `}
     >
