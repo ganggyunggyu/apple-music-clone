@@ -12,10 +12,9 @@ export const MiniPlayer: React.FC<MiniPlayerProps> = ({ isCollapsed }) => {
   return (
     <div
       className={`fixed left-1/2 -translate-x-1/2  px-4 py-2 min-[70px] bg-white/30 dark:bg-zinc-800/30 backdrop-blur-md rounded-full shadow-lg flex items-center justify-between text-white transition-all duration-300 border border-white/20
-      ${isCollapsed && !isSerach ? 'bottom-2 w-7/12' : 'bottom-20 w-11/12'}
-
-      ${isSerach && isCollapsed && 'translate-y-3'}
-      
+      ${
+        isCollapsed && !isSerach ? 'bottom-2 w-7/12' : 'bottom-20 w-11/12'
+      }      
       `}
     >
       <div className="flex items-center gap-3">

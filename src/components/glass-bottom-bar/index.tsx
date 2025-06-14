@@ -36,7 +36,7 @@ export const GlassBottomBar = () => {
         key={'search'}
         to={'/search'}
         className={`relative flex flex-col items-center justify-center  text-xs text-gray-200  bg-zinc-800/30 backdrop-blur-sm rounded-full transition-all min-w-[70px] min-h-[70px] border border-white/20
-          ${isCollapsed ? 'scale-80' : ''}
+          ${isCollapsed && !isSearch ? 'scale-80' : ''}
           ${isSearch ? 'w-full flex-1 items-start' : ''}
           `}
       >

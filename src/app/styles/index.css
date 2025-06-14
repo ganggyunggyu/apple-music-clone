@@ -7,3 +7,15 @@ html,
 body {
   background-color: #000;
 }
+
+input {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}

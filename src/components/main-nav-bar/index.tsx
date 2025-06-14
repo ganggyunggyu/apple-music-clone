@@ -34,7 +34,7 @@ export const MainNavBar: React.FC<MainNavBarProps> = ({
     <motion.nav
       key={current}
       animate={{
-        scale: isCollapsed ? 0.85 : 1.02,
+        scale: isCollapsed && !isSearch ? 0.85 : 1.02,
       }}
       initial={{ scale: 1 }}
       transition={{
@@ -93,10 +93,10 @@ export const MainNavBar: React.FC<MainNavBarProps> = ({
               className="relative z-10 flex flex-col items-center"
             >
               <Icon
-                size={isCollapsed && isSearch ? 28 : 32}
+                size={isCollapsed && !isSearch ? 28 : 32}
                 className={isActive ? 'text-primary' : 'text-white'}
               />
-              {!isCollapsed && (
+              {!isCollapsed && !isSearch && (
                 <span
                   className={`mt-0.5 ${
                     isActive ? 'text-primary' : 'text-white'
